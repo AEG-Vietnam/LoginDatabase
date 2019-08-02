@@ -1,0 +1,27 @@
+names = ['wub_wub', 'theelous3', 'RubyPinch', 'go|dfish', 'Nitori']
+
+stop = False
+while not stop:
+    name = input("Enter your name: ")
+    if name in names:
+        print("I know you!")
+    else:
+        print("Sorry, I don't know who you are :(")
+        print("let me fix that!")
+        names.append(name)
+        print("Now I know you!")
+    stop_stop = False
+    while not stop_stop:
+        stop_input = input("Check more names? (y/n)")
+        if 'y' == stop_input.lower() or 'yes' == stop_input.lower():
+            stop_stop = True
+        elif 'n' == stop_input.lower() or 'no' == stop_input.lower():
+            stop = True
+            stop_stop = True
+        else:
+            print("Try again!")
+
+print(f"I know {len(names)} people!")
+
+for member in names:
+    print(member)

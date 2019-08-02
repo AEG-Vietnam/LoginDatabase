@@ -35,7 +35,7 @@ def has_account():
     elif 'n' == register_input.lower() or 'no' == register_input.lower():
         return False
     else:
-        has_account()
+        return has_account()
 
 
 def check_login_info(database):
